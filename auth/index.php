@@ -25,10 +25,8 @@ if ($_GET[token] == NULL) {
 	$sql    = "select mac from wifidog where mac='".$_GET[mac]."'";
 	$result = mysql_query($sql);
 	$row    = mysql_fetch_row($result);
-	if ($row != NULL) {echo ("Auth: 1\n");
-		echo ("Messages: Allow Access\n");
-	} else {echo ("Auth: 0\n");
-		echo ("Messages: No Access\n");}
+	if ($row != NULL) {$var='1';
+	} else {$var='0';}
 } else {
 	$to     = $_GET[token];
 	$ma     = $_GET[mac];
@@ -42,9 +40,14 @@ if ($_GET[token] == NULL) {
 	$sql    = "select mac from wifidog where mac='".$_GET[mac]."'";
 	$result = mysql_query($sql);
 	$row    = mysql_fetch_row($result);
-	if ($row != NULL) {echo ("Auth: 1\n");
-		echo ("Messages: Allow Access\n");
-	} else {echo ("Auth: 0\n");
-		echo ("Messages: No Access\n");}
+	if ($row != NULL) {$var='1';
+	} else {$var='0'}
+};
+if($var=='1'){
+	echo ("Auth: 1\n");
+	echo ("Messages: Allow Access\n");
+}else{
+	echo ("Auth: 0\n");
+echo ("Messages: No Access\n");
 }
 ?>
