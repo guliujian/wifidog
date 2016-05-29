@@ -10,7 +10,7 @@ if (!$con)
 }
 
 header("Content-Type: text/html; charset=utf-8");
-$phone=$_GET['phone'];
+$phone=base64_decode($_GET['phone']);
 $password=base64_decode($_GET['pas']);
 $sql="INSERT INTO `radcheck` (`username`, `attribute`, `op`, `value`) VALUES ('$phone', 'Cleartext-Password', ':=', '$password')";
 $result = mysqli_query($con, $sql);
