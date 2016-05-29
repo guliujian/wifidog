@@ -49,9 +49,9 @@ if (empty($gw_address) || empty($gw_port)) {
   </div>
   <div style="clear:both;"></div>
   <div class="phone-login clearfix">
-  <div id="loginbox">
-  		<a href="../index.php?gw_address=<?php echo $gw_address;?>&gw_port=<?php echo $gw_port;?>" class="button button-rounded button-flat-action btn22-l mt20 input_box">上 网</a>
-      <a href="backtologin://"  class="button button-rounded button-flat-action btn22-l mt20 input_box">免 费 上 网 </a>
+  < id="loginbox">
+<!--      <a href="backtologin://"  class="button button-rounded button-flat-action btn22-l mt20 input_box">免 费 上 网 </a>-->
+      <p class="button button-rounded button-flat-action btn22-l mt20 input_box">请回到app</p>
   </div>
   </div>
   <!--/手机号登录组件-->
