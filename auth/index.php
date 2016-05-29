@@ -14,7 +14,7 @@
 // echo ("Messages: No Access\n");
 // exit;
 $host     = '127.0.0.1';
-$username = 'wifidog';
+$username = 'root';
 $password = 'glj1234@!';
 mysql_connect($host, $username, $password) or die('连接数据库失败!');
 mysql_select_db('wifidog') or die('选择数据库失败!');
@@ -25,8 +25,10 @@ if ($_GET[token] == NULL) {
 	$sql    = "select mac from wifidog where mac='".$_GET[mac]."'";
 	$result = mysql_query($sql);
 	$row    = mysql_fetch_row($result);
-	if ($row != NULL) {print_r("Auth: 1");} else {print_r("Auth: 0");}
-
+	if ($row != NULL) {echo ("Auth: 1\n");
+		echo ("Messages: Allow Access\n");
+	} else {echo ("Auth: 0\n");
+		echo ("Messages: No Access\n");}
 } else {
 	$to     = $_GET[token];
 	$ma     = $_GET[mac];
@@ -40,7 +42,9 @@ if ($_GET[token] == NULL) {
 	$sql    = "select mac from wifidog where mac='".$_GET[mac]."'";
 	$result = mysql_query($sql);
 	$row    = mysql_fetch_row($result);
-	if ($row != NULL) {print_r("Auth: 1");} else {print_r("Auth: 0");}
-
+	if ($row != NULL) {echo ("Auth: 1\n");
+		echo ("Messages: Allow Access\n");
+	} else {echo ("Auth: 0\n");
+		echo ("Messages: No Access\n");}
 }
 ?>
