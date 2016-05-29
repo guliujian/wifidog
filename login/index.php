@@ -1,9 +1,9 @@
 <?php
-	 $gw_address = $_REQUEST['gw_address'];
-	 $gw_port = $_REQUEST['gw_port'];
-	 if(empty($gw_address) || empty($gw_port)){
-	 	die('error');
-	 }
+$gw_address = $_REQUEST['gw_address'];
+$gw_port    = $_REQUEST['gw_port'];
+if (empty($gw_address) || empty($gw_port)) {
+	die('error');
+}
 ?>
 <!DOCTYPE html>
 <html>
@@ -13,14 +13,14 @@
 <meta name="Hancoson" content="True">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=0.5, user-scalable=no">
 <title>Wi-Fi验证</title>
-<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css" charset="UTF-8">
-<link rel="stylesheet" type="text/css" href="../css/buttons.min.css" charset="UTF-8">
-<link rel="stylesheet" type="text/css" href="../css/common.min.css" charset="UTF-8">
-<link rel="stylesheet" type="text/css" href="../css/media_queries.min.css" charset="UTF-8">
-<script src="./js/hm.js"></script>
-<script src="./js/hm(1).js"></script>
-<script type="text/javascript" src="../js/jquery.min.js" charset="UTF-8"></script>
-<script type="text/javascript" src="../js/html5.js" charset="UTF-8"></script>
+<link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css" charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="/css/buttons.min.css" charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="/css/common.min.css" charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="/css/media_queries.min.css" charset="UTF-8">
+<script src="/js/hm.js"></script>
+<script src="/js/hm(1).js"></script>
+<script type="text/javascript" src="/js/jquery.min.js" charset="UTF-8"></script>
+<script type="text/javascript" src="/js/html5.js" charset="UTF-8"></script>
 </head>
 
 <body>
@@ -28,9 +28,9 @@
   <div class="title">Wi-Fi登陆</div>
 </div>
 <div class="content clearfix login2_bg">
-  <link rel="stylesheet" type="text/css" href="../css/style.min.css" charset="UTF-8">
-  <link rel="stylesheet" type="text/css" href="../css/style.css" charset="UTF-8">
-  <link rel="stylesheet" type="text/css" href="../css/style(1).css" charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="/css/style.min.css" charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="/css/style.css" charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="/css/style(1).css" charset="UTF-8">
    <div class="cover_title">
 	<h3>认证上网</h3>
 	<P>一键点击实现免费畅游</p>
